@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+// three.js
+import { Canvas } from '@react-three/fiber';
+import { Sky, PointerLockControls } from "@react-three/drei";
+
+// 컴포넌트 모음
+import Character from './components/Character';
+import Ground from "./components/Ground";
+
+import './css/App.css';
 
 function App() {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='wrap'>
+      <Canvas>
+        <PointerLockControls />
+        <Sky sunPosition={[100, 20, 100]} />
+        <Ground />
+        <Character />
+
+      </Canvas>
     </div>
   );
 }

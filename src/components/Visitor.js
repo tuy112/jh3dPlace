@@ -1,14 +1,19 @@
 import React from 'react';
 import { useBox } from '@react-three/cannon';
 
-function Character() {
+function Visitor() {
+
   const [ref] = useBox(() => ({
     mass: 1,               // 질량 적용 (중력에 영향을 받도록)
-    position: [0, 2.5, 0], // 초기 위치 설정
+    position: [0, 4, 0], // 초기 위치 설정
   }));
 
   return (
     <group ref={ref}>
+      {/* 조명 설정 */}
+      <ambientLight intensity={1} />
+      <directionalLight position={[-1, 0, 1]} intensity={0.5} />
+
       {/* 머리 */}
       <mesh position={[0, 2.5, 0]}>
         <sphereGeometry args={[0.5, 32, 32]} />
@@ -48,4 +53,4 @@ function Character() {
   );
 }
 
-export default Character;
+export default Visitor;

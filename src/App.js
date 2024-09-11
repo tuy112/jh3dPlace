@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // three.js
 import { Canvas } from '@react-three/fiber';
@@ -12,9 +12,22 @@ import Ground from "./components/Ground";
 import Mirror from './components/Mirror';
 import Player from './components/Player';
 
+import Loading from './components/Loading';
+
 import './css/App.css';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
   
   return (
     <div id='wrap'>

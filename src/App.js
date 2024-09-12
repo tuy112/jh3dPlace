@@ -11,6 +11,7 @@ import Visitor from './components/Visitor';
 import Ground from "./components/Ground";
 import Mirror from './components/Mirror';
 import Player from './components/Player';
+import MusicBox from './components/MusicBox';
 
 import Loading from './components/Loading';
 
@@ -20,9 +21,11 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+
     setTimeout(() => {
       setLoading(false);
     }, 5000);
+
   }, []);
 
   if (loading) {
@@ -30,7 +33,10 @@ function App() {
   }
   
   return (
-    <div id='wrap'>
+    <div id='wrap'>\
+      {/* 과녁점 */}
+      <div className="crosshair"></div>
+
       <Canvas>
         <Physics>
           <PointerLockControls />
@@ -41,6 +47,7 @@ function App() {
           <Player />
           <Mirror />
 
+          <MusicBox />
         </Physics>
       </Canvas>
     </div>

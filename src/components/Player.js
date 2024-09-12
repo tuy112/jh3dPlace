@@ -7,7 +7,7 @@ function Player() {
   const ref = useRef();
   const [playerRef, api] = useBox(() => ({
     mass: 1,
-    position: [0, 1, 0],
+    position: [3, 1, 0],
     args: [1, 1, 1],
     friction: 0.1, // 마찰 조정
     restitution: 0.5 // 충돌 후 반발력 조정

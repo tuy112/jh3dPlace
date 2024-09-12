@@ -4,7 +4,7 @@ import { useBox } from '@react-three/cannon';
 function Character() {
   const [ref] = useBox(() => ({
     mass: 1,               // 질량 적용 (중력에 영향을 받도록)
-    position: [0, 2.5, 0], // 초기 위치 설정
+    position: [3, 2.5, 5], // 초기 위치 설정
   }));
 
   return (

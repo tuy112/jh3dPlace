@@ -27,8 +27,7 @@ canvas {
     width: 15px;
     height: 15px;
     background-color: transparent;
-    border: 2px solid black; /* 과녁점 모양을 설정 */
+    border: 2px solid black;
     border-radius: 50%;
     z-index: 10;
-    pointer-events: none; /* 클릭 불가능하게 설정 */
 }

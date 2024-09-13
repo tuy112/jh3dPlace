@@ -33,7 +33,7 @@ function App() {
   }
   
   return (
-    <div id='wrap'>\
+    <div id='wrap'>
       {/* 과녁점 */}
       <div className="crosshair"></div>
 

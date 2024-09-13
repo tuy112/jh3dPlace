@@ -6,7 +6,7 @@ function Ground() {
     // 물리적 바닥 설정
     const [ref] = usePlane(() => ({
         rotation: [-Math.PI / 2, 0, 0],  // 바닥을 수평으로 회전
-        position: [0, -5, 0],            // 바닥 위치 설정
+        position: [0, 0, 0],            // 바닥 위치 설정
       }));
 
     const geometry = new PlaneGeometry(500, 500);

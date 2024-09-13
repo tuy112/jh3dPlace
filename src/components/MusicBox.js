@@ -32,7 +32,7 @@ function MusicBox() {
   });
 
   return (
-    <mesh ref={boxRef} position={[0, 1, 0]} onClick={toggleMusic}>
+    <mesh ref={boxRef} position={[3, 5, 0]} onClick={toggleMusic}>
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={isPlaying ? 'orange' : 'brown'} />
     </mesh>

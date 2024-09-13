@@ -8,7 +8,7 @@ const Mirror = () => {
   const mirrorRef = useRef();
 
   useEffect(() => {
-    const geometry = new THREE.PlaneGeometry(5, 5);
+    const geometry = new THREE.PlaneGeometry(8, 8);
     const reflector = new Reflector(geometry, {
       clipBias: 0.003,
       textureWidth: window.innerWidth * window.devicePixelRatio,
@@ -16,7 +16,7 @@ const Mirror = () => {
       color: 0x889999,
     });
 
-    reflector.position.set(0, 1, -5); // 거울 위치
+    reflector.position.set(2, 0, -5); // 거울 위치
 
     mirrorRef.current = reflector;
     scene.add(reflector);

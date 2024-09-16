@@ -1,0 +1,16 @@
+/* House.js */
+.door {
+    position: absolute;
+    width: 1px; /* 문을 닫았을 때의 너비 */
+    height: 2px;
+    background-color: brown;
+    transition: width 0.3s ease;
+}
+
+.door.open {
+    width: 1px; /* 문이 열렸을 때의 너비 */
+}
+
+.door.open-anim {
+    transition: width 0.3s ease;
+}

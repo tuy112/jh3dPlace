@@ -14,6 +14,7 @@ import Player from './components/Player';
 import MusicBox from './components/MusicBox';
 
 import Loading from './components/Loading';
+import House from './components/House';
 
 import './css/App.css';
 
@@ -34,7 +35,6 @@ function App() {
   
   return (
     <div id='wrap'>
-      {/* 과녁점 */}
       <div className="crosshair"></div>
 
       <Canvas>
@@ -48,7 +48,10 @@ function App() {
           <Mirror />
 
           <MusicBox />
+
         </Physics>
+
+        <House />
       </Canvas>
     </div>
   );
